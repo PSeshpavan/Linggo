@@ -2,8 +2,13 @@ import Image from 'next/image'
 import Blob from '@logos/blob.svg';
 import HeroImage from '../images/8440.jpg';
 import Link from 'next/link';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/auth';
 
-export default function Home() {
+export default async function Home() {
+
+  const session = await getServerSession(authOptions);
+
   return (
     <main className=''>
       <div>

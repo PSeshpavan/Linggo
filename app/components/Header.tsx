@@ -7,6 +7,8 @@ import { authOptions } from '@/auth'
 import Link from 'next/link'
 import { MessagesSquareIcon } from 'lucide-react'
 import CreateChatButton from './CreateChatButton'
+import UpgradeBanner from './UpgradeBanner'
+import LanguageSelect from './LanguageSelect'
 
 
 
@@ -15,7 +17,6 @@ import CreateChatButton from './CreateChatButton'
 
 const Header = async () => {
     const session = await getServerSession(authOptions);
-    console.log(session);
     
 
 
@@ -28,6 +29,7 @@ const Header = async () => {
 
                 <div className='flex flex-1 items-center justify-end space-x-4'>
                     {/* Language Select */}
+                    <LanguageSelect />
 
                     {/* Session */}
                     {session ? (
@@ -53,7 +55,7 @@ const Header = async () => {
             </nav>
 
             {/* Upgraded Banner */}
-
+            <UpgradeBanner />
 
         </header>
     )

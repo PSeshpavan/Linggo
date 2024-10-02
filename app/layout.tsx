@@ -4,6 +4,10 @@ import './globals.css'
 import Header from './components/Header'
 import { ThemeProvider } from './components/ThemeProvider'
 import ClientProvider from './components/ClientProvider'
+import FirebaseAuthProvider from './components/FirebaseAuthProvider'
+import SubscriptionProvider from './components/SubscriptionProvider'
+import { Toaster } from './components/ui/toaster'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,22 +22,29 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+
     <ClientProvider >
       <html lang="en">
         <body className={inter.className}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+          <FirebaseAuthProvider>
+            <SubscriptionProvider>
 
-            <Header />
-            {children}
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+              >
 
-          </ThemeProvider>
+                <Header />
+                {children}
+
+                <Toaster />
+              </ThemeProvider>
+            </SubscriptionProvider>
+          </FirebaseAuthProvider>
         </body>
       </html>
-    </ClientProvider>
+    </ClientProvider >
   )
 }

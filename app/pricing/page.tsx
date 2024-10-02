@@ -17,7 +17,7 @@ const PricingPage = () => {
                 </div>
                 <header className="text-center mb-12">
                     <p className="text-sm text-purple-400">Pricing</p>
-                    <h1 className="text-4xl font-bold mt-2">The right price for you, whoever you are</h1>
+                    <h1 className="text-4xl font-bold mt-2 text-black dark:text-white">The right price for you, whoever you are</h1>
                     <p className="text-lg text-muted-foreground mt-2">We're 99% sure we have a plan to match 100% of your needs</p>
                 </header>
                 <PricingCards redirect = {true}/>
