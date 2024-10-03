@@ -6,12 +6,12 @@ import { getFunctions } from "firebase/functions";
 
 // Firebase Configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCX516b3BD4fn8CQhAWFpIZGS6o52fREIg",
-    authDomain: "linggo-c3b57.firebaseapp.com",
-    projectId: "linggo-c3b57",
-    storageBucket: "linggo-c3b57.appspot.com",
-    messagingSenderId: "580061755867",
-    appId: "1:580061755867:web:8aa586262fbc4311748ffe"
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId:  process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId:  process.env.FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
