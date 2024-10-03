@@ -35,7 +35,7 @@ const SubscriptionProvider = ({
         }, (error) => {
             console.log("Erorr getting subscription: ", error);
         })
-    }, [session]);
+    }, [session, setSubscription]);
 
     return (
         <div>{children}</div>
