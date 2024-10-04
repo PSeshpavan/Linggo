@@ -123,9 +123,9 @@ const InviteUser = ({ chatId }: { chatId: string }) => {
             <>
                 <Dialog open={open} onOpenChange={setOpen}>
                     <DialogTrigger asChild>
-                        <Button>
+                        <Button className='max-[450px]:w-32 max-[450px]:p-2'>
                             <PlusCircleIcon className="mr-1" />
-                            Add a User to the chat
+                            Add User
                         </Button>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-md">

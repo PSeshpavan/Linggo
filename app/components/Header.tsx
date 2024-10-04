@@ -27,7 +27,7 @@ const Header = async () => {
                 {/* LOGO */}
                 <Logo />
 
-                <div className='flex flex-1 items-center justify-end space-x-4'>
+                <div className='flex flex-1 items-center justify-end space-x-3 max-[450px]:space-x-2'>
                     {/* Language Select */}
                     <LanguageSelect />
 

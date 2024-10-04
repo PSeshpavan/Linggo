@@ -16,7 +16,7 @@ export default function UserAvatar({
     className?: string;
 }) {
     return (
-        <Avatar className={cn('bg-white text-black', className)}>
+        <Avatar className={cn('bg-white  text-black max-[450px]:ml-2', className)}>
             { image && (
                 <Image
                 src={image}
@@ -25,7 +25,7 @@ export default function UserAvatar({
                 height={40}
 
                 referrerPolicy="no-referrer"
-                className="rounded-full"
+                className="rounded-full ml:20"
                 />
             )}
             {/* <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" /> */}

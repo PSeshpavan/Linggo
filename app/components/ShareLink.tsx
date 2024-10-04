@@ -56,7 +56,7 @@ const ShareLink = ({
             defaultOpen={isOpen}
         >
             <DialogTrigger asChild>
-                <Button variant="outline">
+                <Button variant="outline" className='max-[450px]:w-32 max-[450px]:p-2'> 
                     <Copy className="mr-2" />
                     Share Link
                 </Button>
