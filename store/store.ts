@@ -54,9 +54,15 @@ export const useLanguageStore = create<LanguageState>((set , get) => ({
 interface SubscriptionState {
     subscription: Subscription | null | undefined;
     setSubcription: (subscription: Subscription | null | undefined) => void;
+    fetchSubscription: () => void;
 }
 
 export const useSubscriptionStore = create<SubscriptionState>((set) => ({
     subscription: undefined,
     setSubcription: (subscription: Subscription | null | undefined) => set({ subscription }),
-})); 
+    fetchSubscription: async () => {
+        const response = await fetch('/api/subscription');
+        const data = await response.json();
+        set({ subscription: data });
+    },
+}));

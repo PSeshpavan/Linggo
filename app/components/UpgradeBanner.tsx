@@ -1,13 +1,19 @@
 'use client'
 
+import { useEffect } from "react";
 import { useSubscriptionStore } from "@/store/store";
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 
 const UpgradeBanner = () => {
     const subscription = useSubscriptionStore((state) => state.subscription);
+    const fetchSubscription = useSubscriptionStore((state) => state.fetchSubscription);
     const isPro = subscription?.role === "pro";
     const router = useRouter();
+
+    useEffect(() => {
+        fetchSubscription();
+    }, [fetchSubscription]);
 
     if(subscription === undefined || isPro) return null;
 
