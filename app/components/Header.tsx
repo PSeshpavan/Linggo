@@ -27,7 +27,7 @@ const Header = async () => {
                 {/* LOGO */}
                 <Logo />
 
-                <div className='flex flex-1 items-center justify-end space-x-3 max-[450px]:space-x-2'>
+                <div className='flex flex-1 items-center justify-end space-x-3 max-[450px]:space-x-3'>
                     {/* Language Select */}
                     <LanguageSelect />
 
@@ -37,7 +37,7 @@ const Header = async () => {
                             <Link
                                 href={'/chat'} prefetch={false}>
                                 <MessagesSquareIcon className='text-black dark:text-white' />
-                                </Link>
+                            </Link>
                                 <CreateChatButton />
                         </>
                     ) : (

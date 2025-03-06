@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const PricingPage = () => {
     return (
-        <div className="min-h-screen mt-20 text-white flex flex-col items-center justify-center">
+        <div className="min-h-screen max-[450px]:mt-10 lg:mt-20 text-white flex flex-col items-center justify-center">
                 <div>
                     <Image
                         priority

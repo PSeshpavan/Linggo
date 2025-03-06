@@ -100,7 +100,7 @@ const LanguageSelect = () => {
     if (!isChatPage) return null;
 
     return (
-        <div className="">
+        <div className="mr-0.5">
             <Select
                 onValueChange={(value: LanguagesSupported) => languageStore.setLanguage(value)}
             >
