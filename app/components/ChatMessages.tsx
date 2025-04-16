@@ -48,7 +48,7 @@ const ChatMessages = ({
                         </span> {" "}
                         below to get started.
                     </h2>
-                    <p>The AI will auto aetect & translate it all for you</p>
+                    <p>The AI will auto detect & translate it all for you</p>
                 </div>
             )}
 
